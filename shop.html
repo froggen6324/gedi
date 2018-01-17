@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+					
+			.shoplist{
+				width: 950px;
+				margin:50px auto;
+				
+			}
+			.shop-item{
+				width: 100%;
+				
+				/*border: 1px solid #d1d1d1;*/
+				margin: 20px auto;
+				text-align: center;
+			}
+			.fl{
+				float: left;
+			}
+			.shop-item input[type="checkbox"]{
+				width: 30px;
+				height: 30px;
+			}
+			.shop-item .fl{
+				padding: 10px;
+				width: 129px;
+				display: block;
+				font-style: normal;
+				height: 150px;
+				border: 1px solid #d1d1d1;
+				margin-left: -1px;
+			}
+			.shop-item .fl:after{
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+			.shop-item .count > span{
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				border: 1px solid #d1d1d1;
+				line-height: 30px;
+				cursor: pointer;
+				margin-left: 5px;
+			}
+			#sum{
+				width: 1050px;
+				margin: 20px auto 100px;
+				text-align: right;
+			}
+		</style>
+
+	
+	</head>
+	<body>
+		<!--head-->
+	<div id="head_1">
+				<div class="head_con">
+					<div class="head_l">
+						<a href="login.html">请登录</a>
+						<a href="register.html">注册</a>
+					</div>
+					<div class="head_r">
+						<a class="a1" href="">4006-177-188</a>
+						<a class="a2" href="">微信商城</a>
+						<a class="a3" href="">手机商城</a>
+						<a class="a4" href="">帮助中心</a>
+						<div class="boxl">
+							<img src="img/weixin.jpg" alt="" />
+							<h2>微信商城送福利</h2>
+							<p>关注即减25元</p>
+						</div>
+						<div class="boxr">
+							<img src="img/yidong.jpg" alt="" />
+							<h2>手机下单更优惠</h2>
+							<p>每单减1元</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="head_2">
+				<div class="head_con2">
+					<div class="head_conl"><a href=""><img src="img/1-1.jpg" alt="" /></a></div>
+					<h1><img src="img/logo.jpg" alt="" /></h1>
+					<div class="head_conr">
+						<input type="text" value="请输入商品关键字" class="inp1"/>
+						<input type="button" value="搜索" class="inp2" />
+					</div>
+				</div>
+			</div>
+			<!--nav-->
+			<div id="nav">
+				<ul class="nav_con">
+						<li class="li_1">
+							<a href="" class="a1">本店所有商品</a>
+							<ul class="list" style="z-index: 99;">
+								<li class="list_1">
+									<a href="">热卖推荐</a>
+									<ul class="list_01">
+										<li><a href="">*春季新品</a></li>
+										<li><a href="">*夏季新品</a></li>
+										<li><a href="">*秋季新品</a></li>
+										<li><a href="">*冬季新品</a></li>
+										<li><a href="">*热卖单品</a></li>
+										<li><a href="">*经典之选</a></li>
+										<li><a href="">*必买清单</a></li>
+										<li><a href="">*天衣无缝</a></li>
+									</ul>
+								</li>
+								<li class="list_2">
+									<a href="">女士</a>
+									<ul class="list_02">
+										<li><a href="">*春季新品</a></li>
+										<li><a href="">*夏季新品</a></li>
+										<li><a href="">*秋季新品</a></li>
+										<li><a href="">*冬季新品</a></li>
+										<li><a href="">*热卖单品</a></li>
+										<li><a href="">*经典之选</a></li>
+										<li><a href="">*必买清单</a></li>
+										<li><a href="">*天衣无缝</a></li>
+									</ul>
+								</li>
+								<li class="list_3">
+									<a href="">男士</a>
+									<ul class="list_03">
+										<li><a href="">*春季新品</a></li>
+										<li><a href="">*夏季新品</a></li>
+										<li><a href="">*秋季新品</a></li>
+										<li><a href="">*冬季新品</a></li>
+										<li><a href="">*热卖单品</a></li>
+										<li><a href="">*经典之选</a></li>
+										<li><a href="">*必买清单</a></li>
+										<li><a href="">*天衣无缝</a></li>
+									</ul>
+								</li>
+								<li class="list_4">
+									<a href="">儿童</a>
+									<ul class="list_04">
+										<li><a href="">*春季新品</a></li>
+										<li><a href="">*夏季新品</a></li>
+										<li><a href="">*秋季新品</a></li>
+										<li><a href="">*冬季新品</a></li>
+										<li><a href="">*热卖单品</a></li>
+										<li><a href="">*经典之选</a></li>
+										<li><a href="">*必买清单</a></li>
+										<li><a href="">*天衣无缝</a></li>
+									</ul>
+								</li>
+								<li class="list_5">
+									<a href="">女鞋</a>
+									<ul class="list_05">
+										<li><a href="">*春季新品</a></li>
+										<li><a href="">*夏季新品</a></li>
+										<li><a href="">*秋季新品</a></li>
+										<li><a href="">*冬季新品</a></li>
+										<li><a href="">*热卖单品</a></li>
+										<li><a href="">*经典之选</a></li>
+										<li><a href="">*必买清单</a></li>
+										<li><a href="">*天衣无缝</a></li>
+									</ul>
+								</li>
+								<li class="list_6">
+									<a href="">女包</a>
+									<ul class="list_06">
+										<li><a href="">*春季新品</a></li>
+										<li><a href="">*夏季新品</a></li>
+										<li><a href="">*秋季新品</a></li>
+										<li><a href="">*冬季新品</a></li>
+										<li><a href="">*热卖单品</a></li>
+										<li><a href="">*经典之选</a></li>
+										<li><a href="">*必买清单</a></li>
+										<li><a href="">*天衣无缝</a></li>
+									</ul>
+								</li>
+								<li class="list_7">
+									<a href="">男鞋</a>
+									<ul class="list_07">
+										<li><a href="">*春季新品</a></li>
+										<li><a href="">*夏季新品</a></li>
+										<li><a href="">*秋季新品</a></li>
+										<li><a href="">*冬季新品</a></li>
+										<li><a href="">*热卖单品</a></li>
+										<li><a href="">*经典之选</a></li>
+										<li><a href="">*必买清单</a></li>
+										<li><a href="">*天衣无缝</a></li>
+									</ul>
+								</li>
+								<li class="list_8">
+									<a href="">日化食品</a>
+									<ul class="list_08">
+										<li><a href="">*春季新品</a></li>
+										<li><a href="">*夏季新品</a></li>
+										<li><a href="">*秋季新品</a></li>
+										<li><a href="">*冬季新品</a></li>
+										<li><a href="">*热卖单品</a></li>
+										<li><a href="">*经典之选</a></li>
+										<li><a href="">*必买清单</a></li>
+										<li><a href="">*天衣无缝</a></li>
+									</ul>
+								</li>
+								<li class="list_9">
+									<a href="" class="a11">特惠品</a>
+									<ul class="list_09">
+										<li><a href="">*春季新品</a></li>
+										<li><a href="">*夏季新品</a></li>
+										<li><a href="">*秋季新品</a></li>
+										<li><a href="">*冬季新品</a></li>
+										<li><a href="">*热卖单品</a></li>
+										<li><a href="">*经典之选</a></li>
+										<li><a href="">*必买清单</a></li>
+										<li><a href="">*天衣无缝</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="">秋冬新品</a></li>
+						<li><a href="">女士</a></li>
+						<li><a href="">男士</a></li>
+						<li><a href="">儿童</a></li>
+						<li><a href="">女鞋</a></li>
+						<li><a href="">女包</a></li>
+						<li><a href="">男鞋</a></li>
+						<li><a href="">日化</a></li>
+						<li><a href="">马甲</a></li>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--shoplist-->
+			<div class="shoplist">
+							'<div class="shop-item clearfix">'+
+					'<p class="fl"><input type="checkbox" class="ck"/></p>'+
+					'<img class="fl" src="img/'+ shopinfo.src +'" alt="" />'+
+					'<span class="fl">'+ shopinfo.price +'元</span>'+
+					'<p class="fl count" '+
+						'data-id="'+ shopinfo.id +'" '+
+						'data-price="'+ shopinfo.price +'" data-count="'+ shopinfo.count +'"'+
+						'data-name="'+ shopinfo.name +'" data-src="'+ shopinfo.src +'"'+
+						'>'+
+						'<span class="updateCount" data-number="1">+</span>'+
+						'<span class="shop-count">'+ shopinfo.count +'</span>'+
+						'<span class="updateCount" data-number="-1">-</span>'+
+					'</p>'+
+					'<em class="fl sumPrice">'+ (shopinfo.count * shopinfo.price) +'元</em>'+
+					'<i class="fl delBtn">删除</i>'+
+				'</div>';
+			
+		</div>
+		<div id="sum" class="clearfix">
+			共多少<span class="count2"></span>件商品，合计<span class="money2"></span>元
+			<label class="fl">
+				
+			</label>
+		</div>
+
+	<!--link-->
+		    <div id="link">
+		    	<div class="link_con">
+		    		<h1><img src="img/logo.jpg" alt="" /></h1>
+		    		<ul>
+		    			<h2>购物指南</h2>
+		    			<li><a href="">会员礼遇</a></li>
+		    			<li><a href="">商城保障</a></li>
+		    			<li><a href="">购物指南</a></li>
+		    			<li><a href="">售后服务</a></li>
+		    		</ul>
+		    		<ul>
+		    			<h2>关于我们</h2>
+		    			<li><a href="">公司简介</a></li>
+		    			<li><a href="">公司官网</a></li>
+		    			<li><a href="">帮助中心</a></li>
+		    			<li><a href="">联系我们</a></li>
+		    		</ul>
+		    		<ul class="ul3">
+		    			<li><h2>微信商城</h2><img src="img/weixin.jpg"/></li>
+		    			<li><h2>手机商城</h2><img src="img/weibo.jpg"/></li>
+		    			<li><h2>新浪微博</h2><img src="img/yidong.jpg"/></li>
+		    			<li class="li4"><h2>苹果APP</h2><img src="img/pingguo.jpg"/></li>
+		    		</ul>
+		    	</div>
+		    </div>
+    <!--yq_link-->
+		    <div id="yq_link">
+		    	<ul class="ul1 clearfix">
+		    		<li><a href="">友情链接：</a><a href="">申请友情链接</a></li>
+		    		<li><a href="">广东哥弟时尚服饰研发有限公司</a></li>
+		    		<li><a href="">哥弟官方旗舰店-天猫</a></li>
+		    		<li><a href="">哥弟官方旗舰店-京东</a></li>
+		    		<li><a href="">快递单号查询</a></li>
+		    	</ul>
+		    	<p>
+		    		哥弟官方商城版权 Copyright © 2014 www.girdear.cn All Rights Reserved 			
+		    		<a href="">粤ICP备14020108号-1</a>
+		    	</p>
+		    	<ul class="ul2">
+		    		<li><a href=""><img class="img1" src="img/gh.jpg"/></a></li>
+		    		<li><a href=""><img class="img2" src="img/360.jpg"/></a></li>
+		    	</ul>
+		    </div>
+		</div>
+
+	</body>
+	<script>
+		
+	</script>
+</html>
